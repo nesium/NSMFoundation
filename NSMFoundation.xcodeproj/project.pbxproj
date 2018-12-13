@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2CA26E1121C222C6001004EE /* NSMFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CA26E0721C222C6001004EE /* NSMFoundation.framework */; };
-		2CA26E1621C222C6001004EE /* NSMFoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA26E1521C222C6001004EE /* NSMFoundationTests.swift */; };
 		2CA26E1821C222C6001004EE /* NSMFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CA26E0A21C222C6001004EE /* NSMFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CA26E2A21C2231E001004EE /* DispatchQueue+NSM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA26E2321C2231E001004EE /* DispatchQueue+NSM.swift */; };
 		2CA26E2B21C2231E001004EE /* MutatingLens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA26E2521C2231E001004EE /* MutatingLens.swift */; };
@@ -16,6 +15,8 @@
 		2CA26E2D21C2231E001004EE /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA26E2721C2231E001004EE /* Function.swift */; };
 		2CA26E2E21C2231E001004EE /* Prism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA26E2821C2231E001004EE /* Prism.swift */; };
 		2CA26E2F21C2231E001004EE /* Lens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA26E2921C2231E001004EE /* Lens.swift */; };
+		2CA26E3B21C22C1A001004EE /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA26E3A21C22C1A001004EE /* Either.swift */; };
+		2CA26E3D21C23D8A001004EE /* EitherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA26E3C21C23D8A001004EE /* EitherTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +34,6 @@
 		2CA26E0A21C222C6001004EE /* NSMFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSMFoundation.h; sourceTree = "<group>"; };
 		2CA26E0B21C222C6001004EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CA26E1021C222C6001004EE /* NSMFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSMFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CA26E1521C222C6001004EE /* NSMFoundationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMFoundationTests.swift; sourceTree = "<group>"; };
 		2CA26E1721C222C6001004EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CA26E2321C2231E001004EE /* DispatchQueue+NSM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+NSM.swift"; sourceTree = "<group>"; };
 		2CA26E2521C2231E001004EE /* MutatingLens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutatingLens.swift; sourceTree = "<group>"; };
@@ -41,6 +41,8 @@
 		2CA26E2721C2231E001004EE /* Function.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
 		2CA26E2821C2231E001004EE /* Prism.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prism.swift; sourceTree = "<group>"; };
 		2CA26E2921C2231E001004EE /* Lens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lens.swift; sourceTree = "<group>"; };
+		2CA26E3A21C22C1A001004EE /* Either.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Either.swift; sourceTree = "<group>"; };
+		2CA26E3C21C23D8A001004EE /* EitherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EitherTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +95,8 @@
 		2CA26E1421C222C6001004EE /* NSMFoundationTests */ = {
 			isa = PBXGroup;
 			children = (
-				2CA26E1521C222C6001004EE /* NSMFoundationTests.swift */,
 				2CA26E1721C222C6001004EE /* Info.plist */,
+				2CA26E3C21C23D8A001004EE /* EitherTests.swift */,
 			);
 			path = NSMFoundationTests;
 			sourceTree = "<group>";
@@ -119,11 +121,12 @@
 		2CA26E2421C2231E001004EE /* Functional */ = {
 			isa = PBXGroup;
 			children = (
-				2CA26E2521C2231E001004EE /* MutatingLens.swift */,
-				2CA26E2621C2231E001004EE /* Monoid.swift */,
+				2CA26E3A21C22C1A001004EE /* Either.swift */,
 				2CA26E2721C2231E001004EE /* Function.swift */,
-				2CA26E2821C2231E001004EE /* Prism.swift */,
 				2CA26E2921C2231E001004EE /* Lens.swift */,
+				2CA26E2621C2231E001004EE /* Monoid.swift */,
+				2CA26E2521C2231E001004EE /* MutatingLens.swift */,
+				2CA26E2821C2231E001004EE /* Prism.swift */,
 			);
 			path = Functional;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CA26E3B21C22C1A001004EE /* Either.swift in Sources */,
 				2CA26E2C21C2231E001004EE /* Monoid.swift in Sources */,
 				2CA26E2B21C2231E001004EE /* MutatingLens.swift in Sources */,
 				2CA26E2A21C2231E001004EE /* DispatchQueue+NSM.swift in Sources */,
@@ -249,7 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CA26E1621C222C6001004EE /* NSMFoundationTests.swift in Sources */,
+				2CA26E3D21C23D8A001004EE /* EitherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
